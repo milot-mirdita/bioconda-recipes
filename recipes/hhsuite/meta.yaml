@@ -28,9 +28,9 @@ requirements:
 
 test:
   commands:
-    - hhblits > /dev/null
-    - hhsearch > /dev/null
-    - hhalign > /dev/null
+    - hhblits -h > /dev/null
+    - hhsearch -h > /dev/null
+    - hhalign -h > /dev/null
 
 about:
   home: https://github.com/soedinglab/hh-suite
