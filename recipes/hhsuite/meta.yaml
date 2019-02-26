@@ -1,5 +1,5 @@
-{% set version = "3.1.0" %}
-{% set sha256 = "033db66659a8d2a54b20280c0f9036b7a173f397b5f07d3a214b1dde4d6b6058" %}
+{% set version = "v3.1.0" %}
+{% set sha256 = "e67527c8dd175f5730ca877aa506bc7aa4178cb0154d5b1a2794e1a484956c83" %}
 
 package:
   name: hhsuite
