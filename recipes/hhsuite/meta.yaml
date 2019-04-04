@@ -11,21 +11,26 @@ build:
 source:
   url: https://github.com/soedinglab/hh-suite/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - fmemopen-extern-c.patch 
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - llvm-openmp # [osx]
+    - openmp
     - cmake
-    - make
   host:
+    - llvm-openmp # [osx]
     - openmp
     - perl
     - python
   run:
+    - llvm-openmp # [osx]
     - openmp
-    - python
     - perl
+    - python
 
 test:
   commands:
