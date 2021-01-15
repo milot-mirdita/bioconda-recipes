@@ -37,8 +37,10 @@ test:
 
 about:
   home: https://github.com/soedinglab/mmseqs2
-  license: GPLv3
   summary: "MMseqs2.0: ultra fast and sensitive sequence search and clustering suite"
+  license: GPL-3
+  license_family: GPL
+  license_file: LICENCE.md
 
 extra:
   identifiers:

@@ -36,8 +36,10 @@ test:
 
 about:
   home: https://github.com/soedinglab/plass
-  license: GPLv3
   summary: "Plass (Protein-Level ASSembler) is a software to assemble short read sequencing data on a protein level" 
+  license: GPL-3
+  license_family: GPL
+  license_file: LICENCE.md
 
 extra:
   skip-lints:
