@@ -1,0 +1,42 @@
+{% set version = "1.0.0a" %}
+
+package:
+  name: bmf
+  version: {{ version }}
+
+source:
+  url: https://github.com/soedinglab/bipartite_motif_finder/archive/refs/tags/v{{ version }}.tar.gz 
+  sha256: d3447bce485e8360d5950cd30ed8a348f3184d3d517a3aa1f447174a95988a51
+
+build:
+  number: 0
+  skip: True  # [py<36]
+  script: {{ PYTHON }} -m pip install . --ignore-installed --no-deps -vv
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+    - cython
+    - numpy
+  run:
+    - python
+    - numpy
+    - scipy
+    - pandas
+    - biopython
+    - scikit-learn
+    - matplotlib-base
+    - seaborn
+
+test:
+  commands:
+    - bmf -h
+
+about:
+  home: https://github.com/soedinglab/bipartite_motif_finder
+  license: GPL3
+  license_file: LICENSE
+  summary: Thermodynamic model for de novo bipartite RNA motif discovery 
