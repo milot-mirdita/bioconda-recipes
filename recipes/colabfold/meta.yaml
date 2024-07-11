@@ -14,7 +14,7 @@ build:
     python -m pip install --no-deps --ignore-installed alphafold/
   run_exports:
     - {{ pin_subpackage('colabfold', max_pin="x") }}
-  number: 2
+  number: 3
 
 source:
   - url: https://github.com/sokrypton/ColabFold/archive/refs/tags/v{{ cf_version }}.tar.gz
@@ -69,3 +69,7 @@ extra:
     - biotools:colabfold
   recipe-maintainers:
     - milot-mirdita
+  additional-platforms:
+    # TODO: add when tensorflow gets an aarch64 package
+    # - linux-aarch64
+    - osx-arm64
